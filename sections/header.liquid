@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="{{ 'header.css' | asset_url }}" />
+<div class="header">
+  {% render 'logo' %}
+  {% render 'menu' with menu: section.settings.menu %}
+</div>
+{% schema %}
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Menu"
+      }
+    ]
+  }
+{% endschema %}

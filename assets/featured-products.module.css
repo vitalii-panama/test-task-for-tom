@@ -1,0 +1,112 @@
+.featured-products__title {
+	font-family: "GT Super Display";
+	font-size: 40px;
+	font-weight: 400;
+	margin-top: 80px;
+	margin-bottom: 60px;
+	text-align: center;
+}
+.product {
+	background-color: white;
+	cursor: pointer;
+}
+.product__img img {
+	width: 100%;
+}
+.product-slider {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 35px;
+	gap: 10px;
+	position: relative;
+}
+.product__title {
+	font-family: "GT Super Display";
+	font-size: 20px;
+	font-weight: 400;
+	font-style: italic;
+}
+.product-slider-prev,
+.product-slider-next {
+	cursor: pointer;
+}
+.product__info {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	padding: 20px;
+}
+.product__price {
+	font-size: 14px;
+	margin-top: 5px;
+}
+.product-slider-prev,
+.product-slider-next {
+	display: none;
+}
+.product-slider::after {
+	content: "";
+	display: block;
+	position: absolute;
+	left: 0;
+	width: 20px;
+	top: 0;
+	height: 100%;
+	z-index: 2;
+	pointer-events: none;
+	background: linear-gradient(90deg, rgba(229, 229, 229, 1) 2%, rgba(229, 229, 229, 0) 100%);
+}
+.product-slider::before {
+	content: "";
+	display: block;
+	position: absolute;
+	right: 0;
+	width: 20px;
+	top: 0;
+	height: 100%;
+	z-index: 2;
+	pointer-events: none;
+	background: linear-gradient(270deg, rgba(229, 229, 229, 1) 2%, rgba(229, 229, 229, 0) 100%);
+}
+.featured-products.swiper {
+	max-width: 80%;
+	overflow: visible;
+}
+.shopAll {
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-bottom: 1px solid;
+    color: inherit;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+@media (min-width: 900px) {
+	.product-slider-prev,
+	.product-slider-next {
+		display: block;
+	}
+	.featured-products.swiper {
+		max-width: 100%;
+		overflow: hidden;
+	}
+	.product__title {
+		font-size: 24px;
+	}
+	.product__info {
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: row;
+	}
+	.product-slider::after,
+	.product-slider::before {
+		display: none;
+	}
+	.featured-products__title {
+		font-size: 80px;
+	}
+	.product-slider::after {
+		display: none;
+	}
+}

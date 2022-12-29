@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Platform';
+    font-weight: 400;
+    box-sizing: border-box;
+    background-color: #E5E5E5;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 1400px;
+}
+
+.swiper:not(.swiper-initialized) .swiper-slide {
+    flex-shrink: unset;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    content: ""!important;
+}
+.shopify-section {
+    overflow: hidden;
+    text-align: center;
+}
+@media (min-width: 900px) {
+    .container {
+        padding: 0 16px;
+    } 
+}

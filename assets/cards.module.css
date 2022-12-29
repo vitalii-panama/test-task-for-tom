@@ -1,0 +1,88 @@
+.cards__title {
+    font-family: 'GT Super Display';
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.card__wrapper {
+    padding: 10px 10px 60px;
+}
+.card:not(last-child) .card__wrapper {
+    margin-right: 5px;
+}
+.js-slider-cards.swiper {
+    max-width: 75%;
+    margin-left: 0;
+    overflow: visible;
+}
+.cards__items {
+    display: flex;
+    flex-direction: row;
+}
+
+.card__title {
+    font-family: 'GT Super Display';
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.card__info {
+    font-family: 'GT Super Text';
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 15px;
+}
+.cards-section {
+    position: relative;
+}
+.cards-section::before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 20px;
+    top: 0;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(270deg, rgba(229,229,229,1) 2%, rgba(229,229,229,0) 100%);
+}
+.card__btn {
+    border-bottom: 1px solid black;
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.card {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.card__img img {
+    width: 100%;
+}
+
+.cards {
+    margin-bottom: 36px;
+}
+
+@media (min-width: 900px) {
+    .js-slider-cards.swiper {
+        max-width: 100%;
+        overflow: hidden;
+        margin-left: auto;
+    }
+    .card__title {
+        font-size: 32px;
+    }
+    .cards__title {font-size: 80px;}
+    .cards-section::before {display: none;}
+}

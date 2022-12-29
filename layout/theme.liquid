@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="{{ shop.locale }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    {% if settings.favicon != blank %}
+      <link
+        rel="shortcut icon"
+        href="{{ settings.favicon | img_url: '32x32' }}"
+        type="image/png">
+    {% endif %}
+    <title>{{ page_title }}</title>
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+    {{ content_for_header }}
+    <link rel="stylesheet" href="{{ 'index.css' | asset_url }}" />
+    <link rel="stylesheet" href="{{ 'featured-products.module.css' | asset_url }}" />
+    <link rel="stylesheet" href="{{ 'split-banner.module.css' | asset_url }}" />
+    <link rel="stylesheet" href="{{ 'cards.module.css' | asset_url }}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    {% render 'fonts' %}
+  </head>
+  <body>
+    {% section 'header' %}
+    <div class="container">
+      {{ content_for_layout }}
+    </div>
+    <script
+      async
+      src="{{'index.js' | asset_url}}"
+      type="module"></script>
+  </body>
+</html>

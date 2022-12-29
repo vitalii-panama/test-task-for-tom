@@ -1,0 +1,8 @@
+<div class="menu">
+  {% for link in menu.links %}
+    <a href="{{ link.url }}" class="menu__link">{{ link.title }}</a>
+  {% endfor %}
+  <a href="" class="menu__link icon">{% render 'icons' with name: 'search' %}</a>
+  <a href="" class="menu__link icon cart">{% render 'icons' with name: 'cart' %}</a>
+  <a href="" class="menu__link icon mobile">{% render 'icons' with name: 'menu' %}</a>
+</div>

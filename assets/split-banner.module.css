@@ -1,0 +1,49 @@
+.split-banners {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-top: 36px;
+    margin-bottom: 36px;
+}
+.split-banner {position: relative;}
+.split-banners img {
+    width: 100%;
+}
+
+.split-banner__text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0px 30px;
+}
+
+.split-banner__title {
+    font-family: 'GT Super Display';
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.split-banner__btn {
+    font-size: 12px;
+    border-bottom: 1px solid;
+    display: inline-block;
+    margin-bottom: 45px;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+}
+
+@media (min-width: 900px) {
+    .split-banners {
+        grid-template-columns: 1fr 1fr;
+    }
+    .split-banner__title {    font-size: 64px;}
+    .split-banner__btn {font-size: 16px;}
+}
